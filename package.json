@@ -1,0 +1,60 @@
+{
+  "name": "tiptap-extension-font-size",
+  "description": "font size extension for tiptap",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/siadou/tiptap-extension-font-size.git"
+  },
+  "keywords": [
+    "tiptap",
+    "extension",
+    "font-size"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "peerDependencies": {
+    "@tiptap/core": "^2.0.0-beta.209"
+  },
+  "devDependencies": {
+    "@tiptap/core": "^2.0.0-beta.212",
+    "tsup": "^6.5.0",
+    "typescript": "4.7.4"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "dts": true,
+    "splitting": true,
+    "format": [
+      "esm",
+      "cjs"
+    ]
+  },
+  "author": "siadou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siadou/tiptap-extension-font-size/issues"
+  },
+  "homepage": "https://github.com/siadou/tiptap-extension-font-size#readme",
+  "dependencies": {
+    "@tiptap/extension-text-style": "^2.0.0-beta.212"
+  }
+}
